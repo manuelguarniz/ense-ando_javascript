@@ -7,8 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    Hola Andy
+    <!-- ejercicio de suma -->
+    <div>
+        <h3>Ejercicio de suma</h3>
+        <input id="number1" type="number">
+        +
+        <input id="number2" type="number">
+    
+        <button onclick="suma()">Ejecutar</button>
+    
+        <span> = </span>
+        <span id="resultado"></span>
+    </div>
+
     <script>
+
+        function suma() {
+            console.log('se hizo click');
+            let input1 = document.getElementById('number1');
+            // el signo + antepuesto a una variable, convierte el valor a numerico
+            let value1 = +input1.value;
+
+            let input2 = document.getElementById('number2');
+            // se utiliza la funcion Number para comvertir el valor de la varible en numerico
+            let value2 = Number(input2.value);
+
+            let resultado = value1 + value2;
+
+            let labelResultado = document.getElementById('resultado');
+            labelResultado.innerHTML = resultado;
+
+            console.log(resultado);
+        }
+
         // Variables
         // Operaciones
 
@@ -18,12 +49,12 @@
         // arreglos (conjunto de cosas)
         // Objetos
 
-        let valor1 = 1;
-        let valor2 = 3;
+        // let valor1 = 1;
+        // let valor2 = 3;
 
-        let resultado = valor1 + valor2;
+        // let resultado = valor1 + valor2;
 
-        alert(resultado)
+        // alert(resultado)
 
         // TAREA: un ejemplo de suma, resta, multiplicacion, division, potencia
         // TAREA 2: area del cuadrado, area del triangulo, area de circulo
